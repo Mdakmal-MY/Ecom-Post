@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post | Login</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="shortcut icon" href="#" />
+</head>
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <div class="container flex">
+            <h2 class="logo">Post</h2>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Login</a>
+                        <ul class="navbar-dropdown">
+                            <li><a href="#">Vip Membership</a></li>
+                            <li><a href="/api/user/register">Free Membership</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/api/user/login">Login</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Login -->
+    <section class="login-main">
+        <div class="container">
+            <h2>Login</h2>
+            <div class="login-sub flex">
+                <form action="/api/user/login" method="POST">
+                    <ul>
+                        <li class="flex">
+                            <label for="Email" class="form-label">Email</label>
+                            <input type="email" name="email" id="email"/>
+                        </li>
+                        <li class="flex">
+                            <label for="Password" class="form-label">Password</label>
+                            <input type="password" name="password" id="password"/>
+                        </li>
+                    </ul>
+                    <input type="submit" value="Login" class="btn btn-primary flex">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer bg-secondary py-5">
+        <div class="container grid">
+            <div>
+                <h3>Akmal</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus adipisci voluptas exercitationem illum debitis quo omnis id nobis numquam in itaque ratione ab illo saepe aliquid similique, accusantium earum nemo.</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
