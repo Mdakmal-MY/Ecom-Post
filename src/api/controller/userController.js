@@ -21,7 +21,10 @@ let user_get = async (req, res) => {
     }
 }
 
-let logout_get = async (req, res) => {    
+let logout_get = async (req, res, next) => {
+    res.cookie('session', '', { maxAge: 1})
+    res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+    res.redirect('/')
 }
 
 let register_post = async (req, res) => {

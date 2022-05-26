@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 
 const authenthicateToken = (req, res, next) => {
-    const token = req.cookies.jwt;
+    const token = req.cookies.session;
 
     if (token) {
         jwt.verify(token, process.env.ACCESS_TOKEN, (err, decodedToken) => {
@@ -12,7 +12,6 @@ const authenthicateToken = (req, res, next) => {
             next();
         })
     } else {
-        console.log(token)
         res.redirect('../../')
     }
 }
